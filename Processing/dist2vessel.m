@@ -99,13 +99,13 @@ artY   = arts(:,2);
 %% Find distances from all nodes to their closest arteriole
 
 % Manually select area to be used in xy plane
-% disp({'Choose the Region of Interest, please...'})
-% imagesc(ovrlp)
-% hold on
-% plot(artX,artY,'r.')
-% cmap = [jet(floor(gray_lo-1)); gray(ceil(gray_hi-gray_lo))];
-% colormap(cmap);
-% [~, polyX, polyY] = roipoly;
+disp({'Choose the Region of Interest, please...'})
+imagesc(ovrlp)
+hold on
+plot(artX,artY,'r.')
+cmap = [jet(floor(gray_lo-1)); gray(ceil(gray_hi-gray_lo))];
+colormap(cmap);
+[~, polyX, polyY] = roipoly;
 
 % Find po2 nodes in polygon
 in = inpolygon(x,y,polyX,polyY);
